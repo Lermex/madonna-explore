@@ -1,0 +1,182 @@
+body {
+    font-family: 'Heebo', sans-serif;
+    line-height: 1.5;
+    background: url('../images/background-shapes.svg') no-repeat 0 675px;
+    background-size: cover;
+}
+
+.home-page {
+    background: url('../images/home-gems.svg') no-repeat 0 0;
+    background-size: cover;
+}
+
+h2 {
+    line-height: 1.33;
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 48px;
+}
+
+.logo-black {
+    width: 140px;
+    height: 32px;
+    margin-right: 26px;26px;
+}
+
+.logo-color {
+    width: 371px;
+    height: 83px;
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+}
+
+.hero-face {
+    width: 726px;
+    height: 542px;
+    margin-left: -40%;
+    margin-bottom: 100px;
+}
+
+.tour-subtitle {
+    font-size: 36px;
+    line-height: 1.33;
+}
+
+.buy-tickets-button {
+    background: url('../images/buy-tickets-shape.svg') no-repeat 0 0;
+    width: 279px;
+    height: 89px;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+}
+
+.button-pink, .button-blue {
+    border: none;
+    color: white;
+    border-radius: 0;
+}
+
+.button-standalone {
+    border-radius: 4px;
+    min-width: 245px;
+}
+
+.button-pink {
+    background-color: #e90a8a;
+}
+
+.button-blue {
+    background-color: #00cbff;
+}
+
+.card, .shadow-card {
+    border-radius: 4px;
+    background: white;
+}
+
+.shadow-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+.venue-image {
+    max-width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.venue-inner {
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 8px;
+}
+
+.venue-title {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.venue-subtitle {
+    opacity: 0.5;
+    font-size: 12px;
+}
+
+.venue-button {
+    width: 100%;
+    margin: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.album-cover {
+    width: 340px;
+    height: 340px;
+}
+
+.tour-photo {
+    width: 25%;
+    height: 25%;
+    margin: 0;
+    display: block;
+    background: black;
+}
+
+.tour-photo-see-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    font-size: 48px;
+    font-weight: 800;
+    color: white;
+    line-height: 1.33;
+}
+
+.photos-section {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #e90a8a;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-nav {
+    padding-top: 24px;
+    padding-bottom: 36px;
+    display: flex;
+}
+
+.main-nav-item {
+    font-size: 16px;
+    font-weight: 800;
+    margin: 0 8px;
+}
+
+.see-more-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 48px;
+    margin-bottom: 70px;
+}
+
+.main-footer {
+    background-color: #990a62;
+    color: white;
+    font-size: 16px;
+    padding: 24px;
+}
+
+.main-footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
