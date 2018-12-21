@@ -15,6 +15,7 @@
         .contact-table td,
         .contact-table th {
             padding: 10px;
+            word-break: break-word;
         }
 
         .contact-table td:first-child {
@@ -39,6 +40,31 @@
         input[type="radio"]:checked+span {
             font-weight: bold;
             color: #00cbff;
+        }
+
+        @media (max-width: 999px) {
+            .columns.columns {
+                float: none;
+                width: 100%;
+                margin: 0;
+            }
+
+            form, table {
+                border-radius: 4px;
+                padding: 8px;
+                background: white;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+            }
+        }
+
+        @media (max-width: 550px) {
+            td {
+                display: block;
+            }
+
+            th {
+                display: none;
+            }
         }
     </style>
 </head>

@@ -47,7 +47,7 @@ h3 {
 }
 
 .main-nav-item.current a {
-    opacity: 1;
+    color: black;
 }
 
 .logo-black {
@@ -85,8 +85,13 @@ h3 {
         width: 100%;
         height: auto;
     }
-}
 
+    .music-background {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+}
 
 .tour-subtitle {
     font-size: 36px;
@@ -152,6 +157,11 @@ h3 {
     background: white;
 }
 
+.padding-card {
+    padding: 24px;
+    margin-bottom: 40px;
+}
+
 @media (max-width: 550px) {
     .card, .shadow-card {
         margin-bottom: 48px;
@@ -208,7 +218,10 @@ h3 {
 
 .play-row {
     display: flex;
-    align-items: center;
+}
+
+.play-row-right {
+    flex: 1;
 }
 
 .tracks-section {
@@ -229,8 +242,30 @@ h3 {
     height: 111px;
 }
 
+.sample-track-selected .play-button {
+    margin-top: 42px;
+}
+
+.sample-track-selected .sample-track-info {
+    margin-left: -38px;
+}
+
+.sample-track-selected .track-info-name {
+    font-weight: 800;
+}
+
+.sample-track-selected .track-info-album {
+    opacity: 0.5;
+}
+
+@media (max-width: 999px) {
+    .track-info-singer {
+        display: none;
+    }
+}
+
 .waveform-container {
-    flex: 1;
+    width: calc(100% - 25px);
     min-height: 64px;
 }
 
@@ -243,6 +278,10 @@ h3 {
     margin: 0;
     padding: 0;
     margin-right: 13px;
+    transform-origin: center;
+    transition-duration: 86ms;
+    transition-property: background-color, opacity, margin-top, margin-left;
+    transition-timing-function: ease-out;
 }
 
 .play-button.playing {
@@ -268,10 +307,28 @@ h3 {
     align-items: center;
     justify-content: center;
     width: 25%;
-    font-size: 48px;
+    font-size: 42px;
     font-weight: 800;
     color: white;
     line-height: 1.33;
+}
+
+@media (max-width: 999px) {
+    .tour-photo-see-more {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 700px) {
+    .tour-photo-see-more {
+        height: 293px;
+        width: 100%;
+        font-size: 48px;
+    }
+
+    .luminous-gallery {
+        width: 100%;
+    }
 }
 
 .photos-section {
@@ -380,10 +437,11 @@ h3 {
 }
 
 @media (max-width: 999px) {
-    .main-nav-item {
+    .main-nav-item a {
         background-color: #fafafa;
         margin: 2px;
         padding: 10px;
+        display: block;
     }
 }
 
@@ -406,10 +464,9 @@ h3 {
 }
 
 .main-nav-item a {
-    opacity: 0.5;
     text-decoration: none;
     font-weight: 800;
-    color: black;
+    color: #808080;
 }
 
 .see-more-section {
@@ -454,3 +511,11 @@ h3 {
 .album-description-row {
     margin-bottom: 150px;
 }
+
+@media (max-width: 550px) {
+    .album-description-row {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+

@@ -11,38 +11,71 @@ document.addEventListener('DOMContentLoaded', () => {
         'https://madonna-explore.ams3.digitaloceanspaces.com/Hollie_Cook_-_04_-_Together.mp3',
         'https://madonna-explore.ams3.digitaloceanspaces.com/Hollie_Cook_-_05_-_Stay_Alive.mp3',
         'https://madonna-explore.ams3.digitaloceanspaces.com/hollie-cook_-_ari-up.mp3',
-        'https://madonna-explore.ams3.digitaloceanspaces.com/hollie-cook_-_looking-for-real-love.mp3'
+        'https://madonna-explore.ams3.digitaloceanspaces.com/hollie-cook_-_looking-for-real-love.mp3',
+        'https://madonna-explore.ams3.digitaloceanspaces.com/hollie-cook_-_milk-honey.mp3',
+        'https://madonna-explore.ams3.digitaloceanspaces.com/hollie-cook_-_survive.mp3'
     ];
 
     var wavesurfer;
+
+    var initNew = function (index) {
+        if (wavesurfer) {
+            wavesurfer.destroy();
+        }
+        wavesurfer = WaveSurfer.create({
+            container: '#waveform' + (index + 1),
+            waveColor: linGrad,
+            progressColor: '#00cbff',
+            cursorColor: '#fff',
+            barWidth: 6,
+            barHeight: 2,
+            height: 64,
+            responsive: true,
+            backend: 'MediaElement'
+        });
+        wavesurfer.load(tracks[index], PCMs[index]);
+        wavesurfer.on('ready', function () {
+            wavesurfer.play();
+        });
+    };
 
     [0, 1, 2, 3, 4, 5, 6, 7, 8].forEach(function (index) {
         var button = document.getElementById('play' + (index + 1));
 
         button.addEventListener('click', () => {
-            if (button.classList.contains('playing')) {
-                wavesurfer.pause();
-            } else {
-                if (!wavesurfer) {
-                    wavesurfer = WaveSurfer.create({
-                        container: '#waveform1',
-                        waveColor: linGrad,
-                        progressColor: '#00cbff',
-                        cursorColor: '#fff',
-                        barWidth: 6,
-                        barHeight: 2,
-                        height: 64
+
+            var trackElement = button.parentElement.parentElement;
+            if (!trackElement.classList.contains('sample-track-selected')) {
+                document.querySelectorAll('.sample-track-selected')
+                    .forEach(function(element) {
+                        element.classList.toggle('sample-track-selected');
                     });
-                    wavesurfer.load(tracks[index]);
-                    wavesurfer.on('ready', function () {
-                        wavesurfer.play();
+                trackElement.classList.toggle('sample-track-selected');
+
+                document.querySelectorAll('.play-button.playing')
+                    .forEach(function(element) {
+                        element.classList.toggle('playing');
                     });
+
+                button.classList.toggle('playing');
+
+                if (wavesurfer) {
+                    wavesurfer.destroy();
+                    wavesurfer = null;
                 }
 
-                wavesurfer.play();
+                document.querySelectorAll('wave').forEach(node => node.parentElement.removeChild(node));
+            } else {
+                button.classList.toggle('playing');
             }
 
-            button.classList.toggle('playing');
+            if (!wavesurfer) {
+                initNew(index);
+            } else if (button.classList.contains('playing')) {
+                wavesurfer.play();
+            } else {
+                wavesurfer.pause();
+            }
         });
     });
 
