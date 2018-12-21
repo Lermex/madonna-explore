@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="20px" viewBox="0 0 14 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Button</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+        <g id="Home" transform="translate(-572.000000, -1653.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="Stacked-Group-5" transform="translate(548.000000, 1472.000000)">
+                <g id="Group-8" transform="translate(0.000000, 167.000000)">
+                    <g id="Stacked-Group-3" transform="translate(15.000000, 8.000000)">
+                        <g id="Icon/Play">
+                            <path d="M22.5467128,15.0669179 L10.8800064,6.90022343 C10.0633369,6.31688811 9.01333333,6.90022343 9.01333333,7.83355995 L9.01333333,24.1669489 C9.01333333,25.1002855 10.0633369,25.6836208 10.8800064,25.1002855 L22.5467128,16.933591 C23.1300481,16.4669227 23.1300481,15.5335862 22.5467128,15.0669179 Z" id="Fill"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
