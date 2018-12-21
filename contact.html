@@ -30,6 +30,16 @@
             color: white;
             font-weight: 800;
         }
+
+        .title-select label {
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        input[type="radio"]:checked+span {
+            font-weight: bold;
+            color: #00cbff;
+        }
     </style>
 </head>
 <body>
@@ -129,13 +139,35 @@
                 </table>
             </div>
             <div class="four columns">
-                <form>
+                <form name="contact" method="POST" data-netlify="true">
+                    <div class="title-select">
+                        <label>
+                            <input type="radio" name="title" value="mr">
+                            <span class="label-body">Mr</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="title" value="mrs">
+                            <span class="label-body">Mrs</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="title" value="miss">
+                            <span class="label-body">Miss</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="title" value="ms">
+                            <span class="label-body">Ms</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="title" value="dr">
+                            <span class="label-body">Dr</span>
+                        </label>
+                    </div>
                     <label for="nameInput">Name</label>
                     <input class="u-full-width" type="text" placeholder="Jane" id="nameInput">
                     <label for="emailInput">Email</label>
                     <input class="u-full-width" type="email" placeholder="email@example.com" id="emailInput">
-                    <label for="exampleRecipientInput">Topic</label>
-                    <select class="u-full-width" id="exampleRecipientInput">
+                    <label for="topicInput">Topic</label>
+                    <select class="u-full-width" id="topicInput">
                         <option value="Booking">Booking</option>
                         <option value="General">General Enquiries</option>
                         <option value="Security">Security</option>
@@ -146,6 +178,10 @@
                     </select>
                     <label for="messageInput">Message</label>
                     <textarea class="u-full-width" placeholder="I love Madonna …" id="messageInput"></textarea>
+                    <label>
+                        <input type="checkbox">
+                        <span class="label-body">I agree to have my data processed</span>
+                    </label>
                     <button class="button button-pink button-standalone" type="submit">Send Us A Message</button>
                 </form>
             </div>
